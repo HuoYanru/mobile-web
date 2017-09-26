@@ -1,0 +1,119 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.clearfix:before,.clearfix.after{
+	content:'';
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;
+}
+body{
+	width:7.5rem;
+	margin: 0 auto;
+	background-color: #272d3b;
+}
+.spider{
+	width:7.5rem;
+	height: 7.45rem;
+	background-image: url(images/spider.png);
+	background-size:100% 100%;
+	margin-bottom :1.1rem;
+	/*margin-top:0rem;*/
+}
+.spider1{
+	height:1.3rem;
+	margin:4.9rem 0 0 0.23rem;
+	/*width:;*/
+	/*margin-top:30rem;*/
+}
+.spider1 img{
+	width:1rem;
+	height:1rem;
+	float:left;
+	/*margin: 4.9rem 0 0 0.23rem;*/
+}
+.tu{
+	float:left;
+}
+.zi{
+	height:1rem;
+	float:left;
+	text-align:left;
+	font-weight:normal;
+}
+.spider h3{
+	padding-top:0.55rem;
+	text-align:center;
+	font-size: 0.7rem;
+	/*line-height:15rem;*/
+	color:white;
+	font-weight:normal;
+}
+.biaoti{
+	font-size:0.32rem;
+	/*width:20rem;*/
+	fot-weight:bold;
+	float:left;
+	color:white;
+}
+.inform{
+	font-size:0.24rem;
+	color:white;
+}
+.guaishou a img{
+	/*height:38rem;*/
+	width: 3.33rem;
+	/*float:left;*/
+	margin-right: 0.42rem;
+}
+.guaishou{
+	float: left;
+	height: 3.8rem;
+	margin-bottom: 1.2rem;
+}
+.batman a img{
+	/*height:38rem;*/
+	width: 3.33rem;
+}
+.batman{
+	float: left;
+	height: 3.8rem;
+	margin-bottom: 1.2rem;
+}
+.mg{
+	width: 100%;
+	height: 3.8remss;
+	margin: 0 0.23rem;
+}
+.footer ul{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height:0.98rem;
+}
+
+.footer ul li{
+	/*margin: 0;*/
+	/*padding: 0;*/
+	float: left;
+	list-style: none;
+	height: 0.98rem;
+	line-height: 0.98rem;
+	background: #151a24;
+	width: 20%;
+}
+.footer ul li img{
+	padding: 0;
+	/*clear: both;*/
+	/*float: left;*/
+	width: 0.42rem;
+}
+.footer ul li .text{
+	height: 0.22rem;
+	display: block;
+	width: 100%;
+	font-size: 0.22rem;
+}
