@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>登录|注册</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	    <link rel="stylesheet" href="css/login.css" type="text/css" />
+	    <script src="js/jquery-2.2.2.js"></script>
+	    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript">
+			var userID=document.getElementById('Unumber');
+			var pwd=document.getElementById('Upwd');
+			 $('#btn-submit').click(function(){
+				if($('#Unumber').value==''){
+					p.innerHTML('用户名不能为空');		
+				}
+				else if($('#Upwd').value==''){
+					p.innerHTML('密码不能为空');
+				}
+				else if($('#Unumber').value!=''&&$('#Upwd').value!=''){
+					 $.ajax({
+					 	status:login,
+					 	url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+					 	data:{"userID":userID,"password":pwd},
+					 	success:function(data){
+					 		if(data==0){
+					 			p.innerHTML('用户名不存在');  	
+					 	    }
+					 		else if(data==2){
+					 			p.innerHTML('用户名密码不符');
+					 		}
+					 		else{
+					 			location.href='information.html';
+					 		}
+					 	}
+					 })
+				}
+			})	
+		</script>
+	</head>
+	<body>
+		<div data-role="header" data-position="fixed" data-role="controlgroup" data-type="horizontal" class="head">
+			<h1>登录或注册账号</h1>
+			<a href="#" data-role="button" class="ui-btn-icon-right">取消</a>
+		</div>
+		<div>
+			<form method="post" action="demoform.asp">
+		        <input type="number" name="Unumber" id="Unumber" placeholder="QQ号/手机号">
+		        <input type="password" name="Upwd" id="Upwd" placeholder="请输入密码" />
+		        <a href="information.html" data-role="button" id="btn-submit">登录</a>
+			</form>
+		</div>
+		<span><a href="#">忘记密码？</a></span>
+		<span class="span_right"><a href="register.html">新用户注册</a></span>
+	</body>
+</html>
